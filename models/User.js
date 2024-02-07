@@ -1,13 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 // import bcrypt here (hint- use your activities!)
-
+// Add a new method to the User class that checks if an unhashed password entered by the user can be compared to the hashed password stored in the database (hint- use your activities!)
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
+
 User.init(
   {
     id: {
@@ -16,7 +18,7 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -32,10 +34,9 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: [8, 20],
       },
     },
-
   },
   {
     hooks: {
