@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class DataOne extends Model {}
+class Books extends Model {}
 
-DataOne.init(
+Books.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,7 +11,22 @@ DataOne.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // Add any new columns to the DataOne model here
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    cover: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    author: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    rating: {
+      type: DataTypes.DECIMAL,
+      allowNull: true,
+    }
   },
   {
     sequelize,
@@ -22,4 +37,4 @@ DataOne.init(
   }
 );
 
-module.exports = DataOne;
+module.exports = Books;
