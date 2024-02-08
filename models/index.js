@@ -10,7 +10,7 @@ Books.hasMany(Posts, {
 });
 
 User.hasMany(Books, {
-    foreignKey: 'username'
+    foreignKey: 'id'
 });
 
 // export all models here

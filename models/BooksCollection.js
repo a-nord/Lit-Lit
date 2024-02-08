@@ -16,7 +16,7 @@ Books.init(
       allowNull: false,
       references: {
         model: 'User',
-        key: 'username',
+        key: 'id',
       },
     },
     cover: {
