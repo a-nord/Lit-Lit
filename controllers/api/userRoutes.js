@@ -4,10 +4,15 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // /api/
-// add a post user API route here
+// add a post user API route here api/users
 router.post('/', async (req, res) => {
   try {
+    console.log("you're at api/users");
+    console.table(req.body);
+
     const userData = await User.create(req.body);
+
+    console.table('123123 ' + userData);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
@@ -15,9 +20,15 @@ router.post('/', async (req, res) => {
 
       res.status(200).json(userData);
     });
-    console.log('User attempting to be added');
-  } catch (err) {    
-    res.status(400).json(err);
+  } catch (err) {
+    if (err.name === 'SequelizeUniqueConstraintError') {
+      // Handle unique constraint violation (duplicate email)
+      res.status(400).json({ message: 'Email address is already in use. Please use a different email.' });
+    } else {
+      // Handle other errors
+      console.error('Error creating user:', err);
+      res.status(500).json({ message: 'Internal server error. Please try again later.' });
+    }
   }
 });
 
@@ -46,7 +57,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
     console.log('User attempting to log in');
