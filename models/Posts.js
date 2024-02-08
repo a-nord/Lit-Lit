@@ -11,7 +11,7 @@ Posts.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    context: {
+    text: {
         type: DataTypes.TEXT,
         allowNull: false,
     },
