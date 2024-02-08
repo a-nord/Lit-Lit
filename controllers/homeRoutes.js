@@ -6,6 +6,7 @@ const router = require('express').Router();
 
 // add a get / (landing page) route here
 router.get('/', async (req, res) => {
+  res.render('home') // render the handlebars page you want
   console.log('Landing page attempting to be retrieved');
   try {
   } catch (err) {
@@ -16,6 +17,7 @@ router.get('/', async (req, res) => {
 
 // add a get /login route here
 router.get('/login', (req, res) => {
+  res.render('login-signup')
   console.log('Login page attempting to be retrieved');
   try {
   } catch (err) {

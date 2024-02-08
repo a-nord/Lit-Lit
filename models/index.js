@@ -9,8 +9,13 @@ Books.hasMany(Posts, {
     onDelete: 'CASCADE'
 });
 
+User.hasMany(Posts, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+})
+
 User.hasMany(Books, {
-    foreignKey: 'id'
+    foreignKey: 'user_id'
 });
 
 // export all models here

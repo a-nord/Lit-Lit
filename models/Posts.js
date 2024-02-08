@@ -14,7 +14,6 @@ Posts.init(
     books_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      autoIncrement: true,
       references: {
         model: 'Books',
         key: 'id',
@@ -25,6 +24,12 @@ Posts.init(
         allowNull: false,
     },
 },
+{
+  sequelize,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'Posts',
+}
 )
 
 module.exports = Posts;
