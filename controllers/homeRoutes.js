@@ -1,8 +1,19 @@
 const router = require('express').Router();
+import axios from 'axios';
+//const axios = require('axios'); // legacy way
 
 // Import any models you plan to use for data's routes here
 
 // If you would like to use an authGuard middleware, import it here
+
+async function getData() {
+  try {
+    const response = await axios.get('/user?ID=12345');
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 // add a get / (landing page) route here
 router.get('/', async (req, res) => {
