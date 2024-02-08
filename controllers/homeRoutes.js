@@ -18,7 +18,6 @@ router.get('/', async (req, res) => {
 // add a get /login route here
 router.get('/login', (req, res) => {
   res.render('login-signup')
-  console.log('API-homeRoutes - Login page attempting to be retrieved');
   try {
   } catch (err) {
     console.log('There was an error retrieving login page');
