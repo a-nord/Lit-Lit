@@ -11,6 +11,15 @@ Posts.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    books_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      references: {
+        model: 'Books',
+        key: 'id',
+      },
+    },
     text: {
         type: DataTypes.TEXT,
         allowNull: false,
