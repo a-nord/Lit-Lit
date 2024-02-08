@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require("../utils/auth");
 
 // Import any models you plan to use for data's routes here
 
@@ -17,11 +18,12 @@ router.get('/', async (req, res) => {
 
 // add a get /login route here
 router.get('/login', (req, res) => {
-  res.render('login-signup')
-  try {
-  } catch (err) {
-    console.log('There was an error retrieving login page');
-    res.status(500).json(err);
+  console.table(req.session);
+  if (req.session.logged_in) {
+    res.redirect('/');
+
+  } else{
+    res.render('login-signup')
   }
 });
 
