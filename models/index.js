@@ -5,7 +5,7 @@ const Posts = require('./Posts');
 
 // create any associations here
 Books.hasMany(Posts, {
-    foreignKey: 'id',
+    foreignKey: 'books_id',
     onDelete: 'CASCADE'
 });
 
