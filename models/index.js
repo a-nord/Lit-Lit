@@ -1,5 +1,5 @@
 // import all models here
-const User = require('./User');
+const Users = require('./Users');
 const Books = require('./BooksCollection');
 const Posts = require('./Posts');
 
@@ -9,9 +9,9 @@ Books.hasMany(Posts, {
     onDelete: 'CASCADE'
 });
 
-User.hasMany(Books, {
+Users.hasMany(Books, {
     foreignKey: 'id'
 });
 
 // export all models here
-module.exports = { User, Books, Posts };
+module.exports = { Users, Books, Posts };

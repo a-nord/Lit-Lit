@@ -37,7 +37,7 @@ Books.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'data one',
+    modelName: 'Books',
   }
 );
 
