@@ -13,7 +13,8 @@ const signupFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        console.log("Public-signup");
+        //FIXME: delete console.log later
+        console.log("public-signup if response.ok");
         document.location.replace('/');
       } } else {
         const errorData = await response.json();

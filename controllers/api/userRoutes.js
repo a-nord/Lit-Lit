@@ -7,9 +7,6 @@ const { User } = require('../../models');
 // add a post user API route here api/users
 router.post('/', async (req, res) => {
   try {
-
-    console.table(req.body);
-
     const userData = await User.create(req.body);
 
 
@@ -18,7 +15,11 @@ router.post('/', async (req, res) => {
       req.session.logged_in = true;
 
       res.status(200).json(userData);
+      
+      
     });
+    //FIXME:
+    console.log("sucessfully crated user");
   } catch (err) {
     if (err.name === 'SequelizeUniqueConstraintError') {
       // Handle unique constraint violation (duplicate email)
@@ -58,6 +59,7 @@ router.post('/login', async (req, res) => {
       req.session.logged_in = true;
 
       res.json({ user: userData, message: 'You are now logged in!' });
+
     });
     console.log('User attempting to log in');
   } catch (err) {
