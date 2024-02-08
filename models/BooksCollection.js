@@ -14,10 +14,6 @@ Books.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: 'User',
-        key: 'id',
-      },
     },
     cover: {
       type: DataTypes.STRING,
@@ -30,7 +26,15 @@ Books.init(
     rating: {
       type: DataTypes.DECIMAL,
       allowNull: true,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'User',
+        key: 'id',
+      },
     }
+
   },
   {
     sequelize,
