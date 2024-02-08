@@ -14,6 +14,10 @@ Books.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
+      references: {
+        model: 'User',
+        key: 'id',
+      },
     },
     cover: {
       type: DataTypes.STRING,
