@@ -23,25 +23,19 @@
           />
         </a>
 
-        <!-- Login button aligned with logo to the right -->
+        <!-- Logout button aligned with logo to the right -->
+        <div>          
         <ul class='flex space-x-4'>
           <li class='navbar-links'>
-            <a
-              href='/login'
-              class='navbar-login hover:underline text-color-black'
-            >Login</a>
+            {{#if logged_in}}
+              <button class="logout-button" id="logout">Logout</button>
+            {{/if}}
           </li>
         </ul>
-      </div>
+
+        </div>
+      </div>    
       
-      <div>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <button class="no-button" id="logout">logout</button>
-        {{/if}}
-      </div>
-
-
     </nav>
 
     
