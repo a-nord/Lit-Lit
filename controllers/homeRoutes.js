@@ -1,6 +1,4 @@
 const router = require('express').Router();
-import axios from 'axios';
-//const axios = require('axios'); // legacy way
 
 // Import any models you plan to use for data's routes here
 
@@ -17,6 +15,7 @@ async function getData() {
 
 // add a get / (landing page) route here
 router.get('/', async (req, res) => {
+  res.render('home') // render the handlebars page you want
   console.log('Landing page attempting to be retrieved');
   try {
   } catch (err) {
@@ -27,11 +26,11 @@ router.get('/', async (req, res) => {
 
 // add a get /login route here
 router.get('/login', (req, res) => {
-  console.log('Login page attempting to be retrieved');
-  try {
-  } catch (err) {
-    console.log('There was an error retrieving login page');
-    res.status(500).json(err);
+  if (req.session.logged_in) {
+    res.redirect('/');
+
+  } else{
+    res.render('login-signup')
   }
 });
 
