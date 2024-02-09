@@ -16,7 +16,6 @@ router.post('/', async (req, res) => {
 
       res.status(200).json(userData);
       
-      
     });
   } catch (err) {
     if (err.name === 'SequelizeUniqueConstraintError') {
