@@ -5,13 +5,15 @@
       <label
         for='search-dropdown'
         class='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'
-      >Your Email</label>
+      ></label>
       <button
         id='dropdown-button'
         data-dropdown-toggle='dropdown'
-        class='flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600'
+        class='display:block flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600'
         type='button'
-      >All categories
+        onclick='toggleDropdown()'
+      >
+        All categories
         <svg
           class='w-2.5 h-2.5 ms-2.5'
           aria-hidden='true'
@@ -26,7 +28,8 @@
             stroke-width='2'
             d='m1 1 4 4 4-4'
           />
-        </svg></button>
+        </svg>
+      </button>
       <div
         id='dropdown'
         class='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700'
@@ -39,26 +42,21 @@
             <button
               type='button'
               class='inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
-            >Mockups</button>
+            >Title</button>
           </li>
           <li>
             <button
               type='button'
               class='inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
-            >Templates</button>
+            >Author</button>
           </li>
           <li>
             <button
               type='button'
               class='inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
-            >Design</button>
+            >Genre</button>
           </li>
-          <li>
-            <button
-              type='button'
-              class='inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
-            >Logos</button>
-          </li>
+
         </ul>
       </div>
       <div class='relative w-full'>
@@ -66,12 +64,12 @@
           type='search'
           id='search-dropdown'
           class='block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500'
-          placeholder='Search Mockups, Logos, Design Templates...'
+          placeholder='Search...'
           required
         />
         <button
           type='submit'
-          class='absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+          class='absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-slate-100 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
         >
           <svg
             class='w-4 h-4'
@@ -93,6 +91,11 @@
       </div>
     </div>
   </form>
+
+  <script>
+    function toggleDropdown() { var dropdown =
+    document.getElementById('dropdown'); dropdown.classList.toggle('hidden'); }
+  </script>
 </section>
 
 <!--Carousel-->
@@ -100,8 +103,21 @@
   <!-- Carousel wrapper -->
   <div class='relative h-56 overflow-hidden rounded-lg md:h-96 bg-transparent'>
     <!-- Slide 1 -->
-    {{> carousel-items}}
-     
+    <div class='hidden duration-700 ease-in-out data-carousel-item'>
+      <div class='carousel-item'>
+        <img
+          src=''
+          class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+          alt=''
+        />
+      </div>
+      <div class='carousel-item'>
+        <!-- Add your content here -->
+      </div>
+      <!-- -->
+    </div>
+    <!-- -->
+  </div>
   <!-- Slider indicators -->
   <div
     class='absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse'
