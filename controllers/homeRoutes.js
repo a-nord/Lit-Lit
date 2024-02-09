@@ -7,9 +7,10 @@ const withAuth = require("../utils/auth");
 
 // add a get / (landing page) route here
 router.get('/', async (req, res) => {
-  res.render('home') // render the handlebars page you want
-  console.log('Landing page attempting to be retrieved');
-  try {
+  try{
+  res.render('home',{ // render the handlebars page you want  
+    logged_in: req.session.logged_in 
+    });
   } catch (err) {
     console.log('There was an error retrieving landing page');
     res.status(500).json(err);
