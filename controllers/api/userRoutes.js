@@ -18,8 +18,6 @@ router.post('/', async (req, res) => {
       
       
     });
-    //FIXME:
-    console.log("sucessfully crated user");
   } catch (err) {
     if (err.name === 'SequelizeUniqueConstraintError') {
       // Handle unique constraint violation (duplicate email)

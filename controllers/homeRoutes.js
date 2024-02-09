@@ -18,7 +18,6 @@ router.get('/', async (req, res) => {
 
 // add a get /login route here
 router.get('/login', (req, res) => {
-  console.table(req.session);
   if (req.session.logged_in) {
     res.redirect('/');
 
