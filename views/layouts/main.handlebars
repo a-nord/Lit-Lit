@@ -6,9 +6,8 @@
     <script src='https://cdn.tailwindcss.com'></script>
     <link rel='stylesheet' href='/css/style.css' />
   </head>
-  <!--background-->
-  <body class='bg-scroll bg-cover'>
 
+  <header>
     <!--navbar-->
     <nav class='bg-white'>
       <div class='container mx-auto flex justify-between items-center py-4'>
@@ -24,27 +23,30 @@
         </a>
 
         <!-- Logout button aligned with logo to the right -->
-        <div>          
-        <ul class='flex space-x-4'>
-          <li class='navbar-links'>
-            {{#if logged_in}}
-              <button class="logout-button" id="logout">Logout</button>
-            {{/if}}
-          </li>
-        </ul>
+        <div>
+          <ul class='flex space-x-4'>
+            <li class='navbar-links'>
+              {{#if logged_in}}
+                <button class='logout-button' id='logout'>Logout</button>
+              {{/if}}
+            </li>
+          </ul>
 
         </div>
-      </div>    
-      
-    </nav>
+      </div>
 
+    </nav>
+  </header>
+  <!--background-->
+  <body class='bg-scroll bg-cover'>
+
+    {{{body}}}
     <main>
-      {{{body}}}     
+
     </main>
 
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+      <script src='/js/logout.js'></script>
     {{/if}}
   </body>
 </html>
-
