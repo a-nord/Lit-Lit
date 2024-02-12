@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
-const { Books } = require('../../models');
+const { Books } = require('../models');
 
 router.post('/', async (req, res) => {
   console.log(req.body.revisedUserData);

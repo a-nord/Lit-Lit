@@ -9,7 +9,7 @@ console.log(revisedUserData);
 
 if (revisedUserData) {
   try {
-    const response = await fetch('/api/results', {
+    const response = await fetch('/results', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
