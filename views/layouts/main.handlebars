@@ -9,6 +9,7 @@
   <!--background-->
   <body class='bg-scroll'>
     <header>
+      {{#if logged_in}}
       <!--navbar-->
       <nav class='bg-white'>
         <div class='container mx-auto flex justify-between items-center py-4'>
@@ -29,10 +30,8 @@
           <!-- Logout button aligned with logo to the right -->
           <div>
             <ul class='flex space-x-4'>
-              <li class='navbar-links'>
-                {{#if logged_in}}
-                  <button class='logout-button' id='logout'>Logout</button>
-                {{/if}}
+              <li class='navbar-links'>                
+                  <button class='logout-button' id='logout'>Logout</button>                
               </li>
             </ul>
 
@@ -40,6 +39,7 @@
         </div>
 
       </nav>
+      {{/if}}
     </header>
 
     <main>
