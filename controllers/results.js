@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
-const { Books } = require('../models');
+let globalBooks = [];
 
 router.post('/', async (req, res) => {
   console.log(req.body.revisedUserData);
@@ -11,13 +11,17 @@ router.post('/', async (req, res) => {
   // const results = response;
   const results = response.data.docs;
 
-  const filteredArray = results.map((el) => ({
+  const books = results.map((el) => ({
     title: el.title,
     author_name: el.author_name,
     cover_edition_key: el.cover_edition_key,
   }));
+  globalBooks = books
 
-  console.log(filteredArray);
 });
 
+router.get('/', async (req, res) =>{
+  console.log(globalBooks);
+  res.render('results', {globalBooks})
+})
 module.exports = router;
