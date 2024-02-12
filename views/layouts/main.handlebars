@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <!--background-->
+  <body>
   <header>
 
     <!--navbar-->
@@ -35,11 +36,17 @@
 
         </div>
       </div>
-
     </nav>
   </header>
-  <body class='bg-scroll bg-cover'>
 
-    {{{body}}}
+    <main>
+      {{{body}}}     
+    </main>
+
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
+

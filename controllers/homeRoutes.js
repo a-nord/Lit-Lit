@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth')
 
 // Import any models you plan to use for data's routes here
 
@@ -14,7 +15,7 @@ async function getData() {
 }
 
 // add a get / (landing page) route here
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try{
   res.render('home',{ // render the handlebars page you want  
     logged_in: req.session.logged_in 

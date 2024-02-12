@@ -1,4 +1,4 @@
-// Any javascript needed for the dataOne goes here
+// front- saving the user's books to the database
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,8 +14,12 @@ async function handleSave() {
 
 
   try {
-    const response = await axios.post('/api/saveBook', { title, author });
-    console.log('Book saved successfully:', response.data);
+    await fetch('/api/saveBook', 
+    {method: 'POST',
+    body: JSON.stringify({title, author, cover}),
+    headers: {'Content-Type': 'application/json'},
+  });
+    console.log('Book saved successfully');
 
   } catch (error) {
     console.error('Error saving book:', error);

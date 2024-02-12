@@ -65,7 +65,7 @@ router.post('/login', async (req, res) => {
 });
 
 // /api/logout
-// add a post logout API route here
+// post logout API route
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
