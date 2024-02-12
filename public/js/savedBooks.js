@@ -1,5 +1,5 @@
 // front- saving the user's books to the database
-
+var likedButn = document.querySelector('liked')
 
 document.addEventListener('DOMContentLoaded', () => {
   const saveButton = document.getElementById('saveButton');
@@ -27,4 +27,7 @@ async function handleSave() {
   }
 }
 
+likedButn.addEventListener('click', () => {
+  console.log('You Liked IT!')
+});
 // hint- remember to import them in your handlebars!
