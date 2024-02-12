@@ -7,7 +7,8 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <!--background-->
-  <body class='bg-scroll bg-cover'>
+  <body>
+  <header>
 
     <!--navbar-->
     <nav class='bg-white'>
@@ -24,23 +25,24 @@
         </a>
 
         <!-- Logout button aligned with logo to the right -->
-        <div>          
-        <ul class='flex space-x-4'>
-          <li class='navbar-links'>
-            {{#if logged_in}}
-              <button class="logout-button" id="logout">Logout</button>
-            {{/if}}
-          </li>
-        </ul>
+        <div>
+          <ul class='flex space-x-4'>
+            <li class='navbar-links'>
+              {{#if logged_in}}
+                <button class='logout-button' id='logout'>Logout</button>
+              {{/if}}
+            </li>
+          </ul>
 
         </div>
-      </div>    
-      
+      </div>
     </nav>
+  </header>
 
     <main>
       {{{body}}}     
     </main>
+
 
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
