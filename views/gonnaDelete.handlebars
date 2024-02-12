@@ -2,3 +2,34 @@
 {{#each books|}}
     {{> items}}
 {{/each}}
+
+{{!-- Search bar--}}
+<div>
+    function Example() {
+  return (
+    <form action="" method="POST">
+      {/* ... */}
+      <Fieldset>
+        <Legend>Find your book</Legend>
+        <Text>Without this your odds of getting your order are low.</Text>
+        <FieldGroup>
+          <Field>
+            <Label>Search by what?</Label>
+            <Select name="search" id="searchCriteria">
+              <option>Title</option>
+              <option>Author</option>
+              <option>Genre</option>
+            </Select>
+            <Description></Description>
+          </Field>
+          <Field>
+            <Label>What are you looking for?</Label>
+            <Input name="typeSearch" id="search-input" />
+          </Field>
+        </FieldGroup>
+      </Fieldset>
+      {/* ... */}
+    </form>
+  )
+}
+</div>

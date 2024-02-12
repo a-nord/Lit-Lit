@@ -1,19 +1,20 @@
 // Any JS for the home page goes here
 const searchHandler = async (event) => {
   event.preventDefault();
-  const search = document.querySelector('.search-input').value.trim();
+  const search = document.querySelector('.search-dropdown').value.trim().toLowerCase();
   const revisedUserData = search.replace(/ /g, '+');
+  const searchCriteria = document.getElementById('.dropdown').value.toLowerCase();
+
 
   if (search) {
     try {
-
-      // ask user if they want to search for title, or author, then in the tyupe content have them type
-      const response = await axios.get(`https://openlibrary.org/search.json?${search}=${revisedUserData}`);
+      const response = await axios.get(`https://openlibrary.org/search.json?${searchCriteria}=${revisedUserData}`);
       const results = response.data.results;
       
       const title = results[0].title;
       const author = results[0].author_name[0];
       const cover = results[0].cover_i;
+      console.log(title);
 
 
       const data = {
