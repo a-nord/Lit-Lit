@@ -16,6 +16,12 @@ if (revisedUserData) {
       },
       body: JSON.stringify({ revisedUserData }),
     });
+    // FIXME: redirect to new page
+    if (response.ok) {
+      window.location.href = '/results';
+    } else {
+      console.error('Error during fetch. Status:', response.status);
+    }
   } catch (error) {
     // Handle any network or other errors
     console.error('Error during fetch:', error);
