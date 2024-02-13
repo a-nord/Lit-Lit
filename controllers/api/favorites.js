@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
       `https://covers.openlibrary.org/b/olid/${bookCover}-S.jpg`
     );
 
-    res.render('carousel-items.handlebars', {Books: cover})
+    res.render('carousel-items', {Books: cover})
   } catch (err) {
     res.status(500).json(err);
   }

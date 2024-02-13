@@ -46,4 +46,12 @@ router.get('/signup', (req, res) => {
   }
 });
 
+router.get('/book-page', async (req, res) => {
+  try {
+    res.render('book-page')
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
