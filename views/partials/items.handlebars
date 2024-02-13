@@ -7,10 +7,9 @@
   <img src="https://covers.openlibrary.org/b/olid/{{cover_edition_key}}-M.jpg" alt="cover for {{title}}">
   {{! save/like/favorite button }}
   <p class="hidden">{{isbn}}</p>
-  <button type='button' id="book-results">Learn more</button>
+  <a href="/api/book-page/{{isbn}}" id="book-results">Learn more</a>
 
   <button type='submit' class='liked'>Liked</button>
 </article>
 
 <script src='/js/savedBooks.js'></script>
-<script src="/js/choosebook.js"></script>
