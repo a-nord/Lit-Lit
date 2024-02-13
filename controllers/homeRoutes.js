@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth')
+const withAuth = require('../utils/auth');
 
 // Import any models you plan to use for data's routes here
 
@@ -16,9 +16,10 @@ async function getData() {
 
 // add a get / (landing page) route here
 router.get('/', withAuth, async (req, res) => {
-  try{
-  res.render('home',{ // render the handlebars page you want  
-    logged_in: req.session.logged_in 
+  try {
+    res.render('home', {
+      // render the handlebars page you want
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log('There was an error retrieving landing page');
@@ -30,9 +31,8 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
-
-  } else{
-    res.render('login-signup')
+  } else {
+    res.render('login-signup');
   }
 });
 
