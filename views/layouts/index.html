@@ -1,16 +1,18 @@
-<header>
-  <h1>{{title}}</h1>
-</header>
-<div>
-  {{cover}}
-</div>
-{{author}}
-{{ISBN}}
-{{rating}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>{{title}}</h1>
+    </header>
+    <div>{{cover}}</div>
+    {{author}} {{ISBN}} {{rating}} {{! reviews }}
 
-{{! reviews }}
-<!-- this is the book review text box -->
-<h1> Book Reviews</h1>
+    <h1> Book Reviews</h1>
     
 
    
@@ -37,9 +39,6 @@
             </th>
           </tr>
         </thead>
-        
-        
-        <!-- previous reviews -->
         <tbody>
           <tr
             class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
@@ -103,3 +102,5 @@
     </div>
 
     <script src="script.js"></script>
+  </body>
+</html>
