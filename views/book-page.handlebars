@@ -2,20 +2,20 @@
    <!-- book page layout -->
    <section class="book-page flex justify-center bg-white border border-black-200 rounded-lg">
 <div class="text-black ">
-  <h2>Title: {{title}}</h2>
-  <p>Author: {{author_name}}</p>
+  <h2>Title: {{[0].title}}</h2>
+  <p>Author: {{[0].author_name}}</p>
 
 <div>
   <img
-    src='https://covers.openlibrary.org/b/olid/{{cover_edition_key}}-M.jpg'
+    src='https://covers.openlibrary.org/b/olid/{{[0].cover_edition_key}}-M.jpg'
   />
-  {{cover}}
+  {{[0].cover}}
 </div>
 <div class="text-black">
-  {{rating}}
+  {{[0].rating}}
 </div>
 <div class=" text-black">
-{{ reviews }}
+{{ [0].reviews }}
 <!-- this is the book review text box -->
 <h1> Book Reviews</h1>
 </div>

@@ -6,21 +6,19 @@ const { Posts } = require('../../models');
 
 router.get('/:isbn', async (req, res) => {
   try {
-    const isbn = parseInt(req.params.isbn);
+    console.log(req.params.isbn);
     const response = await axios.get(
-      `https://openlibrary.org/search.json?q=${isbn}`
+      `https://openlibrary.org/search.json?q=${req.params.isbn}`
     );
     const results = response.data.docs;
-
     const bookInfo = results.map((el) => ({
       title: el.title,
       author_name: el.author_name,
       cover_edition_key: el.cover_edition_key,
       isbn: el.isbn,
-      rating: el.rating_average,
+      rating: el.ratings_average,
     }));
-    console.log(bookInfo);
-    res.render('book-page', { bookInfo });
+    res.render('book-page', { ...bookInfo, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
