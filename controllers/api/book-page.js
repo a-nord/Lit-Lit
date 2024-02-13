@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const { Books } = require('../../models');
+const { Posts } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -16,4 +17,21 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.put('/', (req, res) => {
+  Posts.update(
+    {
+    text: (`${comment}`),
+    },
+    {
+      where: {
+        comment: something,
+      },
+    }
+  )
+  .then((updatedPost) => {
+    res.json(updatedPost);
+  })
+  .catch((err) => res.json(err))
 });
