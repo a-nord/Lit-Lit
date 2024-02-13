@@ -127,9 +127,7 @@ npm run start
 
 5. Visit:
 
-[localhost://](
-https://git.heroku.com/lit-lit.git)
-
+[localhost://]()
 <!-- USAGE EXAMPLES -->
 
 ## Usage
@@ -214,7 +212,7 @@ Project Links:
 <!-- !!!IMPORTANT!!! add your deployment link here -->
 
 [Deployment](
-https://git.heroku.com/lit-lit.git)
+https://lit-lit-5480ca7bfcf5.herokuapp.com/)
 
 <!-- ACKNOWLEDGMENTS -->
 
