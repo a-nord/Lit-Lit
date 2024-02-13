@@ -18,11 +18,11 @@ router.post('/', async (req, res) => {
     isbn: el.isbn,
   }));
   globalBooks = books
+  res.render('results', {globalBooks})
 
 });
 
 router.get('/', async (req, res) =>{
-  console.log(globalBooks);
   res.render('results', {globalBooks})
 })
 module.exports = router;

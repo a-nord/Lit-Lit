@@ -16,7 +16,7 @@ if (revisedUserData) {
       },
       body: JSON.stringify({ revisedUserData }),
     });
-    // FIXME: redirect to new page
+
     if (response.ok) {
       window.location.href = '/results';
     } else {
