@@ -1,4 +1,3 @@
-
 <div align="center">
 
   <!-- Add badges using the following format: -->
@@ -128,6 +127,7 @@ npm run start
 5. Visit:
 
 [localhost://]()
+
 <!-- USAGE EXAMPLES -->
 
 ## Usage
@@ -197,22 +197,25 @@ See LICENSE.txt for more information.
 
 <!-- Add your name, portfolio link, and email if you would like here -->
 
-[Altheia Bentley](https://github.com/Aricoria10) 
+[Altheia Bentley](https://github.com/Aricoria10)
 
-[Jazmin Nova](https://github.com/Jazminnova) 
+[Jazmin Nova](https://github.com/Jazminnova)
 
-[Michael Nguyen](https://github.com/MikeNguyen1092) 
+[Michael Nguyen](https://github.com/MikeNguyen1092)
 
-[Ashley Nord](https://github.com/a-nord) 
+[Ashley Nord](https://github.com/a-nord)
 
 Project Links:
 
 [Github Repository](https://github.com/a-nord/Lit-Lit)
 
+[]
+
 <!-- !!!IMPORTANT!!! add your deployment link here -->
 
-[Deployment](
-https://lit-lit-5480ca7bfcf5.herokuapp.com/)
+[Deployment](https://lit-lit-5480ca7bfcf5.herokuapp.com/)
+
+[Project-Presentation](https://docs.google.com/presentation/d/14zCdEt8_-C71gycaTthJQamFR6o2HKmYp2TwuQXr-Rw/edit?usp=sharing)
 
 <!-- ACKNOWLEDGMENTS -->
 
