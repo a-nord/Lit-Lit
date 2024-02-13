@@ -13,7 +13,7 @@ async function handleSave() {
 
   try {
     await fetch('/api/book-page', 
-    {method: 'POST',
+    {method: 'PUT',
     body: JSON.stringify({comment}),
     headers: {'Content-Type': 'application/json'},
   });

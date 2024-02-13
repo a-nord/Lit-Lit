@@ -12,26 +12,37 @@ router.get('/', async (req, res) => {
     const cover = await axios.get(
       `http://openlibrary.org/api/volumes/brief/isbn/${isbn}.json`
     );
+    const results = response.data.docs;
 
-    res.render('book-page.handlebars', { Books: cover });
+    const bookInfo = results.map((el) => ({
+      title: el.title,
+      author_name: el.author_name,
+      cover_edition_key: el.cover_edition_key,
+      isbn: el.isbn,
+      rating: el.rating_average,
+    }));
+
+    globalInfo = bookInfo;
+    res.render('book-page.handlebars', { globalBooks });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.put('/', (req, res) => {
+router.put('/:id', (req, res) => {
+  console.log(req.body);
   Posts.update(
     {
-    text: (`${comment}`),
+      text: req.body.comment,
     },
     {
       where: {
-        comment: something,
+        id: req.params.id,
       },
     }
   )
-  .then((updatedPost) => {
-    res.json(updatedPost);
-  })
-  .catch((err) => res.json(err))
+    .then((updatedPost) => {
+      res.json(updatedPost);
+    })
+    .catch((err) => res.json(err));
 });
