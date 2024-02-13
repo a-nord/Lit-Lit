@@ -1,34 +1,36 @@
 
    <!-- book page layout -->
-<header>
-  <h3>{{title}}</h3>
+   <section class="book-page flex justify-center bg-white border border-black-200 rounded-lg">
+<div class="text-black ">
+  <h2>Title: {{title}}</h2>
   <p>Author: {{author_name}}</p>
-</header>
+
 <div>
   <img
     src='https://covers.openlibrary.org/b/olid/{{cover_edition_key}}-M.jpg'
   />
   {{cover}}
 </div>
-<div>
+<div class="text-black">
   {{rating}}
 </div>
-<div>
+<div class=" text-black">
 {{ reviews }}
 <!-- this is the book review text box -->
 <h1> Book Reviews</h1>
 </div>
 <div>
+ 
 <form id='review-form'>
 
-  <label for='review'>Review:</label><br />
-  <textarea id='review box-border h-32 w-32 p-4 border-4 ' name='review' rows='4' required></textarea><br />
+  <label for='review'>Submit a Review:</label><br />
+  <textarea id='review box-border h-32 w-32 p-4 border-4 border-stone-950' name='review' rows='4' requiredstyle="review 10px border-black"></textarea><br />
 </div>
 <div>
-  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  focus:outline-none">Submit Review</button>
+  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Submit Review</button>
 </div>
 </form>
-
+</section>
 <!-- previous reviews -->
       
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -58,4 +60,5 @@
         </tbody>
       </table>
     </div>
-<script src='script.js'></script>
+    
+<script src='/js/postreviews.js'></script>
