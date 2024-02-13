@@ -26,9 +26,8 @@ if (revisedUserData) {
   }
 }
 };
-// TODO: match the search-container name later. eventListener can be click/submit/enter
+
 document
   .querySelector('#submitBtn')
   .addEventListener('click', searchHandler);
 
-// hint- remember to import them in your handlebars!

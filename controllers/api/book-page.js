@@ -26,7 +26,6 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  console.log(req.body);
   Posts.update(
     {
       text: req.body.comment,

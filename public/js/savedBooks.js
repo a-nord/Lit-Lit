@@ -30,4 +30,3 @@ async function handleSave() {
 likedButn.addEventListener('click', () => {
   console.log('You Liked IT!')
 });
-// hint- remember to import them in your handlebars!

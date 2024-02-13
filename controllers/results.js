@@ -4,7 +4,6 @@ const axios = require('axios');
 let globalBooks = [];
 
 router.post('/', async (req, res) => {
-  console.log(req.body.revisedUserData); 
     const response = await axios.get(
     `https://openlibrary.org/search.json?title=${req.body.revisedUserData}`
   );
