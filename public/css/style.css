@@ -1,13 +1,30 @@
-/* backgorund for the three main pages*/
+/* background for the three main pages*/
 body {
-  background-image: url(../images/books.jpeg);
+  background: url(../images/books.jpeg) repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 
 .search-bar {
   width: inherit;
-  height: 100%;
+  height: 43%;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.searchResults {
+  background-color: oldlace;
+  width: 70%;
+  height: 700px;
+  overflow-y: auto;
+  margin: 30px 30px 60px 30px;
+  padding: 20px;
+}
+
+footer {
+  position: relative;
+  top: -80px;
 }
