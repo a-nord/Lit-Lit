@@ -4,13 +4,11 @@ const axios = require('axios');
 const { Books } = require('../../models');
 const { Posts } = require('../../models');
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const isbn = await Books.isbn();
-    res.status(200).json(userData);
-
-    const cover = await axios.get(
-      `http://openlibrary.org/api/volumes/brief/isbn/${isbn}.json`
+    const isbn = parseInt(req.body.isbn);
+    const response = await axios.get(
+      `https://openlibrary.org/search.json?q=${isbn}`
     );
     const results = response.data.docs;
 
@@ -21,9 +19,7 @@ router.get('/', async (req, res) => {
       isbn: el.isbn,
       rating: el.rating_average,
     }));
-
-    globalInfo = bookInfo;
-    res.render('book-page.handlebars', { globalBooks });
+    res.render('book-page.handlebars', { bookInfo });
   } catch (err) {
     res.status(500).json(err);
   }
