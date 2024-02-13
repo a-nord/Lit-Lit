@@ -4,12 +4,12 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
 const resultsRoute = require('./results')
-// const pageOneRoutes = require('./pageOneRoutes');
+
 
 // Router connection
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 router.use('/results', resultsRoute)
-// router.use('/pageOneRoutes', pageOneRoutes);
+
 
 module.exports = router;
