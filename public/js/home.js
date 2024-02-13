@@ -5,8 +5,6 @@ const searchHandler = async (event) => {
   const search = document.querySelector('#search-dropdown').value.trim();
   const revisedUserData = search.replace(/ /g, '+');
 
-console.log(revisedUserData);
-
 if (revisedUserData) {
   try {
     const response = await fetch('/results', {
