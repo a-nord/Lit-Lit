@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
     title: el.title,
     author_name: el.author_name,
     cover_edition_key: el.cover_edition_key,
+    isbn: el.isbn,
   }));
   globalBooks = books
 
