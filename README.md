@@ -1,7 +1,3 @@
-<!-- For assistance using this README for your project, reach out to your instructinoal staff. -->
-
-<!-- Important: Highlight "404pandas" and shift+command+L (for mac) or cntrl+shift+L (for windows) to select all instances of the example Github username and type your Username in its place -->
-<!-- Important: Highlight "fun_with_yen" and shift+command+L (for mac) or cntrl+shift+L (for windows) to select all instances of the example Github repository name and type your repostitory name in its place -->
 
 <div align="center">
 
@@ -9,34 +5,33 @@
   <!-- ![Name](urlToShieldHere)(urlToGithubHere) -->
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Contributors](https://img.shields.io/github/contributors/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/fun_with_yen/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/fun_with_yen/network/members)
-[![Stargazers](https://img.shields.io/github/stars/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/fun_with_yen/stargazers)
-[![Issues](https://img.shields.io/github/issues/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/fun_with_yen/issues)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=appveyor&logo=linkedin&colorB=555)](https://linkedin.com/in/404pandas)
+[![Contributors](https://img.shields.io/github/contributors/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/a-nord/Lit-Lit/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/a-nord/Lit-Lit/network/members)
+[![Stargazers](https://img.shields.io/github/stars/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/a-nord/Lit-Lit/stargazers)
+[![Issues](https://img.shields.io/github/issues/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/a-nord/Lit-Lit/issues)
 
 </div>
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/404pandas/fun_with_yen">
-    <img src="./public/images/" alt="Logo" width="80" height="80">
+  <a href="https://github.com/a-nord/Lit-Lit">
+    <img src="public/images/Lit-Lit-logo.png" alt="Logo" width="80" height="80">
   </a>
-
-  <h3 align="center">Fun with Yen</h3>
+  
+  <h3 align="center">Lit-Lit</h3>
 
   <p align="center">
-    Traceable learning app for my daughter    <br />
-    <a href="https://github.com/404pandas/fun_with_yen"><strong>Explore the docs »</strong></a>
+    Social media app for the bookworm community to connect with each other and share book recommendations.    <br />
+    <a href="https://github.com/a-nord/Lit-Lit"><strong>Explore Lit-Lit Docs »</strong></a>
     <br />
     <br />
     <!-- !!!IMPORTANT!!! add your deployment link here -->
-    <a href="https://github.com/404pandas/fun_with_yen">View Demo(Broken)</a>
+    <a href="https://github.com/a-nord/Lit-Lit">View Demo(Broken)</a>
     ·
-    <a href="https://github.com/404pandas/fun_with_yen/issues">Report Bug</a>
+    <a href="https://github.com/a-nord/Lit-Lit/issues">Report Bug</a>
     ·
-    <a href="https://github.com/404pandas/fun_with_yen/issues">Request Feature</a>
+    <a href="https://github.com/a-nord/Lit-Lit/issues">Request Feature</a>
 
   </p>
 </div>
@@ -70,19 +65,23 @@
 
 ## About The Project
 
-<!-- !!!IMPORTANT!!! add your screenshots or demo videos here -->
-<!-- Add screenshots using the following format: -->
-<!-- ![Screenshot alt description](directPathOfScreenshots) -->
-<!-- Add video demos using the following format: -->
-<!-- ![Video alt description](directPathOfVideos) -->
+This application is designed for the bookworm community to gather and connect. Users can create an account to access the app's features. You can search for the book you want to add information on, share your thoughts on it, recommend the book to your friends, and contribute any book you're currently reading to the database. Due to time constraints and development complications, many of our ideas will be incorporated into future updates.
+
+Login or Creat an Account
+![login](public/images/loginpage.PNG)
+
+Search Bar
+![search](public/images/search.PNG)
+
+Results Page
+![results](public/images/results.PNG)
 
 <!--  -->
-
-This project was built using Express, Handlebars, mySQL2, sequelize, and materialize.css
 
 ### Built With
 
 <div align="center">
+This project was built using Express, Handlebars, mySQL2, sequelize, and tailwind css.
 
 <!-- TODO -->
 
@@ -105,7 +104,7 @@ Once completely built, this application will function as a deployed app on Herok
 1. Clone the rep
 
 ```
-git clone https://github.com/404pandas/fun_with_yen.git
+git clone https://github.com/a-nord/Lit-Lit.git
 ```
 
 2. Install dependencies
@@ -159,15 +158,16 @@ Once the app is functional, screenshots will be added in this section.
   - [ ] Seeds
   - [ ] apiRouting
   - [ ] userRouting
-  - [ ] dataOneRouting
 
 #### Future Development
 
-- [ ] Add Lines of future development ideas here
-- [ ] Add Lines of future development ideas here
-- [ ] Add Lines of future development ideas here
+- [ ] Profile page to update personal information
+- [ ] Share book recommendations
+- [ ] Create group to make a book club
+- [ ] Carousel that has a list of your liked/save books
+- [ ] Comment of post of people and recommendations
 
-See the [open issues](https://github.com/404pandas/fun_with_yen/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/a-nord/Lit-Lit/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -179,9 +179,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
-3. Commit your Changes (git commit -m 'Add some AmazingFeature')
-4. Push to the Branch (git push origin feature/AmazingFeature)
+2. Create your Feature Branch (git checkout -b feature/Enhancements)
+3. Commit your Changes (git commit -m 'Add some Enhancements')
+4. Push to the Branch (git push origin feature/Enhancements)
 5. Open a Pull Request
 
 <!-- LICENSE -->
@@ -198,11 +198,17 @@ See LICENSE.txt for more information.
 
 <!-- Add your name, portfolio link, and email if you would like here -->
 
-[Mary Elenius](https://maryelenius.com/d20) - mary.panda.jackson@gmail.com
+[Altheia Bentley](https://github.com/Aricoria10) 
+
+[Jazmin Nova](https://github.com/Jazminnova) 
+
+[Michael Nguyen](https://github.com/MikeNguyen1092) 
+
+[Ashley Nord](https://github.com/a-nord) 
 
 Project Links:
 
-[Github Repository](https://github.com/404pandas/fun_with_yen)
+[Github Repository](https://github.com/a-nord/Lit-Lit)
 
 <!-- !!!IMPORTANT!!! add your deployment link here -->
 

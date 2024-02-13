@@ -15,7 +15,7 @@ const bookData = async (event) => {
     });
 
     if (response.ok) {
-        const data = await response.json();
+        window.location.href = '/book-page';
     } else {
         console.error(err);
     }

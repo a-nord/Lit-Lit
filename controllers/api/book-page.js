@@ -4,9 +4,9 @@ const axios = require('axios');
 const { Books } = require('../../models');
 const { Posts } = require('../../models');
 
-router.post('/', async (req, res) => {
+router.get('/:isbn', async (req, res) => {
   try {
-    const isbn = parseInt(req.body.isbn);
+    const isbn = parseInt(req.params.isbn);
     const response = await axios.get(
       `https://openlibrary.org/search.json?q=${isbn}`
     );
@@ -19,7 +19,8 @@ router.post('/', async (req, res) => {
       isbn: el.isbn,
       rating: el.rating_average,
     }));
-    res.render('book-page.handlebars', { bookInfo });
+    console.log(bookInfo);
+    res.render('book-page', { bookInfo });
   } catch (err) {
     res.status(500).json(err);
   }
