@@ -1,105 +1,61 @@
+
+   <!-- book page layout -->
 <header>
-  <h1>{{title}}</h1>
+  <h3>{{title}}</h3>
+  <p>Author: {{author_name}}</p>
 </header>
 <div>
+  <img
+    src='https://covers.openlibrary.org/b/olid/{{cover_edition_key}}-M.jpg'
+  />
   {{cover}}
 </div>
-{{author}}
-{{ISBN}}
-{{rating}}
-
-{{! reviews }}
+<div>
+  {{rating}}
+</div>
+<div>
+{{ reviews }}
 <!-- this is the book review text box -->
 <h1> Book Reviews</h1>
-    
+</div>
+<div>
+<form id='review-form'>
 
-   
+  <label for='review'>Review:</label><br />
+  <textarea id='review box-border h-32 w-32 p-4 border-4 ' name='review' rows='4' required></textarea><br />
+</div>
+<div>
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  focus:outline-none">Submit Review</button>
+</div>
+</form>
 
-      <label for="review">Review this book here :</label><br />
-      <textarea id="review" name="review" rows="4" required></textarea><br />
-
-      <button type="submit">Submit Review</button>
-    </form>
-
+<!-- previous reviews -->
+      
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table
-        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-collapse border border-slate-500 "
-      >
-        <thead
-          class="text-xs text-gray-700 uppercase bg-gray-50"
-        >
+      <table class="w-full text-sm text-left rtl:text-right text-black border-collapse border border-slate-500 ">
+        <thead class="text-xs text-black uppercase bg-gray-50">
           <tr>
-            <th scope="col" class="px-6 py-3 border border-slate-600 ">User</th>
-            <th scope="col" class="px-6 py-3">comment</th>
-            
-            <th scope="col" class="px-6 py-3">
-              <span class="sr-only">Edit</span>
-            </th>
+            <th scope="col" class="px-6 py-3 border border-slate-600">Users:</th>
+            <th scope="col" class="px-6 py-3 border border-slate-600">Reviews:</th>
           </tr>
         </thead>
-        
-        
-        <!-- previous reviews -->
         <tbody>
-          <tr
-            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-          >
-            <th
-              scope="row"
-              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-            >
-              user
-            </th>
-            <td class="px-6 py-4">Silver</td>
-            
-            <td class="px-6 py-4 text-right">
-              <a
-                href="#"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >Edit</a
-              >
-            </td>
+          <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 ">
+            <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap">{{user}}</th>
+            <td class="px-6 py-4">{{review}}</td>
           </tr>
-          <tr
-            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-          >
-            <th
-              scope="row"
-              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-            >
-              user
-            </th>
-            <td class="px-6 py-4">White</td>
-        
-            <td class="px-6 py-4 text-right">
-              <a
-                href="#"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >Edit</a
-              >
-            </td>
+          <tr class="bg-white border-b border-gray-200   hover:bg-gray-50 ">
+            <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap ">{{user}}</th>
+            <td class="px-6 py-4">{{review}}</td>
+          
           </tr>
-          <tr
-            class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600"
-          >
-            <th
-              scope="row"
-              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-            >
-              User
-            </th>
-            <td class="px-6 py-4">Black</td>
-            
-            <td class="px-6 py-4 text-right">
-              <a
-                href="#"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >Edit</a
-              >
+          <tr class="bg-white hover:bg-gray-50 ">
+            <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap ">{{User}}</th>
+            <td class="px-6 py-4">{{review}}</td>
+
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-
-    <script src="script.js"></script>
+<script src='script.js'></script>
